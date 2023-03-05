@@ -404,7 +404,7 @@
     <footer class="footer">
       <div class="container">
         <ul class="list socials-footer">
-          <li>
+          <li class="footer-item">
             <a class="footer-logo link" href="./index.html"
               ><span class="logo-item">Web</span>Studio</a
             >
@@ -413,7 +413,7 @@
               digital marketing &#38; growth solutions.
             </p>
           </li>
-          <li>
+          <li class="footer-socials-item">
             <h3 class="footer-socials-title">Social media</h3>
             <ul class="footer-socials-list">
               <li class="socials-item">
@@ -426,7 +426,7 @@
               <li class="socials-item">
                 <a class="footer-socials-link" href="#">
                   <svg class="footer-socials-icon">
-                    <use href="./images/icons.svg#icon-twitter"></use>
+                    <use se href="./images/icons.svg#icon-twitter"></use>
                   </svg>
                 </a>
               </li>
@@ -446,6 +446,38 @@
               </li>
             </ul>
           </li>
+
+
+            <form class="footer-form" id="footer-form">
+              <div class="footer-form-item">
+                <label class="footer-socials-title" for="footer-user-email"
+                  >Subscribe</label
+                >
+
+                <input
+                  class="footer-user-email"
+                  id="footer-user-email"
+                  type="email"
+                  placeholder="E-mail"
+                  name="footer-user-email"
+                  
+                />
+              </div>
+
+              <div class="footer-submit">
+                <button
+                  class="footer-submit-button"
+                  type="submit"
+                  form="footer-form"
+                >
+                  Subscribe      
+                    <svg class="footer-button-icon">
+                      <use se href="./images/icons.svg#icon-send"></use>
+                    </svg>
+                </button>
+              </div>
+            </form>
+
         </ul>
       </div>
     </footer>
@@ -458,6 +490,65 @@
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
+        <h2 class="form-title">
+          Leave your contacts and we will call you back
+        </h2>
+        <form name="contact-form" autocomplete="on" novalidate>
+          <div class="form-item">
+            <label class="form-row-name" for="user-name">Name</label>
+            <input
+              class="form-row"
+              id="user-name"
+              type="text"
+              name="user-name"
+            />
+            <svg class="form-row-icon">
+              <use href="./images/icons.svg#icon-name"></use>
+            </svg>
+          </div>
+          <div class="form-item">
+            <label class="form-row-name" for="user-phone">Phone</label>
+            <input
+              class="form-row"
+              id="user-phone"
+              type="tel"
+              name="user-phone"
+            />
+            <svg class="form-row-icon">
+              <use href="./images/icons.svg#icon-phone"></use>
+            </svg>
+          </div>
+          <div class="form-item">
+            <label class="form-row-name" for="user-email">E-mail</label>
+            <input
+              class="form-row"
+              id="user-email"
+              type="email"
+              name="user-email"
+            />
+            <svg class="form-row-icon">
+              <use href="./images/icons.svg#icon-email"></use>
+            </svg>
+          </div>
+          <label class="form-row-name" for="user-comment">Comment</label>
+          <textarea
+            class="form-user-comment"
+            name="user-comment"
+            id="user-comment"
+            placeholder="Text input"
+          ></textarea>
+          
+          <div class="user-agreement">
+            <input class="checkbox-input visually-hidden" type="checkbox" name="user-agreement"  />
+            <label class="form-checkbox-text" for="checkbox">
+              I accept the terms and conditions of the
+              <a href="#">Privacy Policy</a>
+            </label>
+          </div>
+          <button class="form-button" data-modal-open type="submit">
+            Send
+          </button>
+        </form>
       </div>
     </div>
 
