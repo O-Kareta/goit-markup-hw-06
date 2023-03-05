@@ -735,7 +735,7 @@ img {
 .form-title {
   font-size: 16px;
   font-weight: 500;
-  line-height: 1.2;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--color-primary);
@@ -745,11 +745,16 @@ img {
   resize: none;
   width: 100%;
   height: 120px;
-  margin-bottom: 16px;
   border: 1px solid #4d5ae5;
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  margin-bottom: 0;
+}
+
+.user-comment {
+  margin-bottom: 0;
+  max-height: 138px;
 }
 
 .form-user-comment:focus,
@@ -759,32 +764,18 @@ img {
 }
 
 .user-agreement {
-  display: flex;
-  text-align: center;
-  height: 16px;
+  margin-top: 16px;
   margin-bottom: 24px;
 }
 
-.checkbox-input {
-  height: 16px;
-  width: 16px;
-  margin-right: 8px;
-  border: 1.25px solid var(--color-primary);
-  border-radius: 2px;
-}
-
-.checkbox:checked, .checkbox:focus {
-  background-color: var(--color-brand);
-  border-color: var(--color-brand);
-}
-
-
 .form-checkbox-text {
-  font-weight: 400;
+  display: flex;
+  height: 16px;
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.04em;
   color: #757575;
+  cursor: pointer;
 }
 
 .form-checkbox-text::before {
@@ -792,8 +783,26 @@ img {
   height: 16px;
   width: 16px;
   margin-right: 8px;
-  border: 1.25px solid var(--color-primary);
+  border: 1.25px solid var(--color-helpertext);
   border-radius: 2px;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox-input:checked + .form-checkbox-text::before {
+  background-color: var(--color-brand);
+  border: 1.25px solid var(--color-brand);
+  border-radius: 2px;
+  background-image: url(../images/check.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.checkbox-input:hover + .form-checkbox-text::before,
+.checkbox-input:active + .form-checkbox-text::before {
+  border-color: var(--color-pressed);
 }
 
 .form-button {
@@ -820,6 +829,11 @@ img {
   transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-button:hover,
+.form-button:focus {
+  background-color: var(--color-pressed);
 }
 
 .footer-user-email {
@@ -878,7 +892,7 @@ img {
 .footer-submit {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: end;
 }
 
 .footer-form {
@@ -895,5 +909,5 @@ img {
 .footer-form-item {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 16px;
 }
